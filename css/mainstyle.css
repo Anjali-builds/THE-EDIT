@@ -1,0 +1,1268 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	font-family:"Inter", sans-serif;
+}
+
+h1{
+	font-family: "Bentham", serif;
+	
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+
+.navbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	height: 90px;
+	padding: 0 80px;
+	background: #171717;
+	z-index: 1000;
+	
+}
+
+/* MAIN NAV CONTAINER */
+.nav-container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* 
+
+.navbar:hover{
+	background-color: #000000;
+}
+*/
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+	position:relative;
+	top: 14%;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+.logo img{
+	width: 280px;
+	height: auto;
+	display: block;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-btn{
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	border: none;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFFFF;
+	font-size: 28px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	
+}
+
+
+/* HAMBURGER HOVER */
+
+.menu-btn:hover{
+	transform: scale(1.08);
+}
+
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-btn {
+    
+    width: 50px;
+	height: 50px;
+	padding: 0;
+    border: none;
+    background: transparent;
+    display: flex;
+	justify-content:center;
+	align-items: center;
+    color: #FFFFFF;
+	font-size: 24px;
+    cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+
+/* SEARCH HOVER */
+
+.search-btn:hover{
+	transform: scale(1.08);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 75px;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 23px;
+    }
+
+    .search-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.hero-image{
+	position: absolute;
+	inset:0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 0;
+}
+
+.hero-container{
+	position: relative;
+	z-index: 1;
+	width: 90%;
+	max-width: 1400px;
+	min-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	
+}
+
+.hero-content{
+	width: 60%;
+	padding-top: 70px;
+}
+
+/* SMALL LABEL */
+
+.hero-label{
+	margin: 0 0 35px;
+	font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    letter-spacing: 5px;
+    color: #FFFFFF;
+}
+
+/* MAIN HEADING */
+
+.hero h1{
+    margin: 0;
+
+    font-family: "Bentham", serif;
+    font-size: clamp(55px, 6vw, 105px);
+
+    font-weight: 400;
+    line-height: 0.95;
+
+    letter-spacing: 1px;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================
+   HIGHLIGHT TEXT ANIMATION
+========================= */
+
+.highlight-text{
+	color: #FFFFFF;
+	animation: editColor 4s ease-in-out infinite; 
+}
+
+@keyframes editColor{
+	0%{
+		color: #FFFFFF;
+	}
+	50%{
+	    color:#C90000;
+	}
+	100%{
+		color: #FFFFFF;
+	}
+}
+
+
+
+/* RED LINE */
+
+.hero-line{
+    display: block;
+
+    width: 65px;
+    height: 3px;
+
+    margin: 38px 0 28px;
+
+    background-color: #C90000;
+}
+
+/* DESCRIPTION */
+
+.hero-description{
+    margin: 0 0 35px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.85);
+}
+
+.hero-line1{
+	display: block;
+
+    width: 105px;
+    height: 3px;
+
+    margin: 38px 0 28px;
+
+    background-color: #C90000;
+}
+
+
+/* =========================
+   HERO BUTTON
+========================= */
+
+.hero-btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 28px;
+	background-color: #C90000;
+	border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+	text-decoration: none;
+	font-family:"Inter", sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	transition: all 0.3s ease;
+}
+
+.hero-btn:hover{
+	background-color: #FFFFFF;
+	color: #000000;
+	border-color:#FFFFFF; 
+}
+
+
+
+/* =========================
+   THE EDIT INTRO SECTION
+========================= */
+
+.edit-intro{
+	width:100%;
+	background-color: #f8f8f3;
+	padding: 70px 20px 80px;
+}
+
+.intro-container{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.intro-logo{
+	width: 150px;
+    height: auto;
+    display: block;
+    margin-bottom: 0 auto 45px;
+}
+
+
+/* =========================
+   INTRO TEXT
+========================= */
+
+.intro-text{
+    max-width: 850px;
+    margin: 0;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    color: #111111;
+}
+
+/* =========================
+   TAGLINE
+========================= */
+
+.intro-tagline{
+    margin: 20px 0 25px;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    color: #777777;
+}
+
+/* =========================
+   OUR STORY BUTTON
+========================= */
+
+
+.story-btn{
+    display: inline-block;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #111111;
+
+    color: #111111;
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.story-btn:hover{
+    letter-spacing: 1px;
+}
+
+
+
+/* =========================
+   FOUR SECTORS
+========================= */
+
+
+.edit-sectors{
+    width: 100%;
+    background-color: #f8f8f3;
+    padding: 110px 0 120px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.sectors-container{
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.sectors-heading{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sectors-label{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #C90000;
+    margin-bottom: 18px;
+}
+
+.sectors-heading h2{
+    font-family: "Bentham", serif;
+    font-size: clamp(45px, 5vw, 75px);
+    font-weight: 400;
+    line-height: 1;
+    color: #111111;
+    margin: 0 0 18px;
+}
+
+.sectors-description{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #666666;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.sector-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 30px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.sector-card{
+    display: block;
+    text-decoration: none;
+    color: #111111;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.sector-image{
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+    background-color: #e9e9e4;
+}
+
+.sector-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* =========================
+   IMAGE HOVER
+========================= */
+
+.sector-card:hover .sector-image img{
+    transform: scale(1.04);
+}
+
+
+
+/* =========================
+   CARD INFORMATION
+========================= */
+
+.sector-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 3px 0;
+}
+  
+
+.sector-info h3{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.sector-info span{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #555555;
+    transition: color 0.3s ease;
+}
+
+.sector-card:hover .sector-info span{
+    color: #C90000;
+}
+
+
+/* ============================= */
+/* WHERE STYLE TAKES FORM */
+/* ============================= */
+
+.style-section{
+	width: 100%;
+	padding: 100px 20px;
+	background-color:#f8f8f3;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.style-content {
+    width: min(850px, 90%);
+    text-align: center;
+}
+
+/* Heading */
+
+.style-content h2 {
+    margin: 0 0 28px;
+    font-family:  "Bentham", serif;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color:#111111;
+}
+
+/* Paragraph */
+
+.style-content p {
+    max-width: 720px;
+    margin: 0 auto 40px;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+
+    color:#111111;
+}
+
+/* THE EDIT */
+
+.style-content h3 {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 7px;
+
+    color:#C00000;
+}
+
+/* =========================
+   THE EDITS VIDEO SECTION
+========================= */
+
+.edit-videos {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background-color: #111111;
+}
+
+/* =========================
+   VIDEO GRID
+========================= */
+
+.video-grid {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr ;
+}
+
+/* =========================
+   VIDEO CARD
+========================= */
+
+.video-card {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    z-index: 1;
+
+    transition: background 0.4s ease;
+}
+
+
+/* =========================
+   VIDEO HOVER
+========================= */
+
+.video-card:hover .video-overlay {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.video-title {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    width: 90%;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    pointer-events: none;
+}
+
+
+.video-title span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: "Quickstand", sans-serif;
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+
+.video-title h2 {
+    margin: 0;
+
+    font-family: "Bentham", serif;
+    font-size: clamp(30px, 3vw, 55px);
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #FFFFFF;
+}
+
+
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.video-card:hover video {
+    transform: scale(1.03);
+    transition: transform 1s ease;
+}
+
+.video-card video {
+    transition: transform 1s ease;
+}
+
+
+/* =========================
+   CRAFTED WITH INTENTION
+========================= */
+
+
+.crafted-section {
+    width: 100%;
+    min-height: 330px;
+
+    background-color: #f8f8f3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 40px;
+    box-sizing: border-box;
+}
+
+.crafted-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Heading */
+
+.crafted-content h2 {
+    margin: 0 0 24px;
+
+    font-family: "Bentham", serif;
+    font-size: 42px;
+    font-weight: 400;
+
+    letter-spacing: 3px;
+    line-height: 1.2;
+
+    color: #b51f1f;
+}
+
+
+/* Paragraph */
+
+.crafted-content p {
+    margin: 0 auto;
+
+    max-width: 800px;
+
+    font-family: "Quickstand", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+
+    color: #333333;
+}
+
+
+/* ==============================
+   ART OF DETAIL
+================================ */
+
+.art-detail {
+    width: 100%;
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+
+    background: #f8f8f3;
+
+    overflow: hidden;
+}
+
+/* IMAGE COLUMNS */
+
+.detail-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.detail-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* subtle luxury hover */
+
+.detail-image:hover img {
+    transform: scale(1.03);
+}
+
+/* CENTER */
+
+.detail-content {
+    background: #f8f8f3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px;
+}
+
+/* TOP RED LINE */
+
+.detail-line {
+    width: 2px;
+    height: 65px;
+
+    background: #b51f1f;
+
+    margin-bottom: 55px;
+}
+
+
+/* HEADING */
+
+.detail-content h2 {
+    margin: 0;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 64px;
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    letter-spacing: 2px;
+
+    color: #111;
+}
+
+/* DIVIDER */
+
+.detail-divider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin: 45px 0 35px;
+}
+
+.detail-divider span {
+    width: 85px;
+    height: 1px;
+
+    background: #b51f1f;
+}
+
+.detail-divider b {
+    color: #b51f1f;
+
+    font-size: 20px;
+
+    font-weight: 400;
+}
+
+/* PARAGRAPH */
+
+.detail-content p {
+    max-width: 520px;
+
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+
+    color: #292929;
+}
+
+
+
+/* =========================
+   THE GIFT OF THE EDIT
+========================= */
+
+.gift-section {
+    width: 100%;
+    min-height: 650px;
+
+    background-color: #f8f8f3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 90px 30px;
+}
+
+/* MAIN CONTAINER */
+
+.gift-container {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* =========================
+   GIFT CARD
+========================= */
+
+.gift-card {
+    width: 320px;
+    margin-bottom: 55px;
+}
+
+.gift-card img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.gift-text h2 {
+    margin: 0 0 25px;
+
+    font-family: "Bentham", serif;
+
+    font-size: 42px;
+    font-weight: 400;
+
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+
+    color: #111111;
+}
+
+/* =========================
+   GIFT CARDS LINK
+========================= */
+
+.gift-link {
+    display: inline-block;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #9b1717;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #9b1717;
+
+    padding-bottom: 7px;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+
+.gift-link:hover {
+    color: #111111;
+    border-color: #111111;
+}
+
+
+/* =========================
+   THE EDIT EXPERIENCE
+========================= */
+
+.experience-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+
+.experience-section > img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.experience-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.28);
+
+    z-index: 1;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.experience-content {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+/* =========================
+   SMALL LABEL
+========================= */
+
+.experience-label {
+    margin: 0 0 25px;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    color: #ffffff;
+}
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.experience-content h2 {
+    margin: 0;
+
+    font-family: "Bentham", serif;
+
+    font-size: clamp(55px, 6vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.experience-description {
+    max-width: 500px;
+
+    margin: 30px 0 35px;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.5px;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   VISIT US
+========================= */
+
+.visit-btn {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    border: 1px solid #ffffff;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+
+.visit-btn:hover {
+    background: #ffffff;
+
+    color: #111111;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    background: #171717;
+    color: #f5f2ed;
+    padding: 80px 10% 35px;
+}
+
+/* MAIN FOOTER */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    padding-bottom: 75px;
+}
+
+/* BRAND */
+
+.footer-brand h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    margin: 0 0 22px;
+}
+
+.footer-brand p {
+    max-width: 430px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #aaa;
+    margin: 0;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.footer-column h3 {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0 0 12px;
+    color: #f5f2ed;
+}
+
+.footer-column a {
+    color: #aaa;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #303030;
+    padding-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 0.5px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
